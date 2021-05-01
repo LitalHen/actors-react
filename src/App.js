@@ -1,13 +1,38 @@
-import GalleryCard from "./component/Gallery-view";
+import GalleryView from "./component/Gallery-view";
 import Actor from "./data-models/Actor";
 
 function App() {
-  const actor1= new Actor ('lital','hen','1989-02-27','https://m.media-amazon.com/images/M/MV5BMTkyNDQ3NzAxM15BMl5BanBnXkFtZTgwODIwMTQ0NTE@._V1_UX214_CR0,0,214,317_AL_.jpg','https://www.imdb.com/name/nm0425005/');
-  const actor2= new Actor ('viki','sau','1989-05-27');
-  const actorArr=[actor1, actor2]
+
+  const actorData=[{
+    "fname":"Dwayne",
+    "lname":"Johnson",
+    "birthday":'1972-05-02',
+    "image":'https://m.media-amazon.com/images/M/MV5BMTkyNDQ3NzAxM15BMl5BanBnXkFtZTgwODIwMTQ0NTE@._V1_UX214_CR0,0,214,317_AL_.jpg',
+    "imdbLink":'https://www.imdb.com/name/nm0425005/'
+  },
+  {
+    "fname":"Jennifer ",
+    "lname":"Aniston",
+    "birthday":'1969-02-11',
+    "image":'https://m.media-amazon.com/images/M/MV5BNjk1MjIxNjUxNF5BMl5BanBnXkFtZTcwODk2NzM4Mg@@._V1_UY317_CR3,0,214,317_AL_.jpg',
+    "imdbLink":'https://www.imdb.com/name/nm0000098/'
+  },
+  {
+    "fname":"Kevin",
+    "lname":"Costner",
+    "birthday":'1955-01-18',
+    "image":'https://m.media-amazon.com/images/M/MV5BMTY1ODkwMTQxOF5BMl5BanBnXkFtZTcwNzkwNDcyMw@@._V1_UX214_CR0,0,214,317_AL_.jpg',
+    "imdbLink":'https://www.imdb.com/name/nm0000126/'
+  },
+]
+
+const actorsArr=actorData.map((actor) => {
+  return new Actor(actor.fname,actor.lname,actor.birthday,actor.image,actor.imdbLink)
+}) 
+  
   return (
     <div>
-   <GalleryCard actorData={actorArr}/>
+   <GalleryView actorsData={actorsArr}/>
     </div>
   );
 }
