@@ -1,12 +1,14 @@
 import React from 'react'
 import { Card, Col, Row } from 'react-bootstrap';
 import FilterByInput from './FilterByInput';
+import SortActor from './SortActor';
 class GalleryView extends React.Component{
     constructor(props){
         super(props);
    
     this.state={
-        filterChar:''
+        filterChar:'',
+        sortBy:''
     }
 }
 
@@ -36,11 +38,16 @@ inputText = (event) => {
          
         return(
             <div>
-                
+                <Col sm={6} md={4} lg={3}>
                 <FilterByInput
                   inputText={this.inputText}
                   filterChar={this.state.filterChar}
              />
+                <SortActor
+                sortBy={this.state.sortBy}
+                />              
+                
+             </Col>
              <Row>
                 {actorFilterArr}
                 </Row>
