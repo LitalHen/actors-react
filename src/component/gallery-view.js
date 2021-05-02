@@ -30,7 +30,6 @@ inputText = (event) => {
                         <a href={actor.imdbLink} target="_blank">  <Card.Title>{`${actor.fname} ${actor.lname}`} </Card.Title></a>
                         <Card.Text>{` BirthDate ${actor.birthday.format('DD/MM/YYYY')}`} </Card.Text> 
                         <Card.Text>{` Age ${actor.calcAge()}`} </Card.Text> 
-                        <small className="text-muted" >  </small>
                         </Card.Body>
                 </Card>
                 </Col>

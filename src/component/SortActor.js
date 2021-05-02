@@ -22,7 +22,7 @@ class SortActor extends React.Component{
            const { selectedOption } = this.state;
         return(
             <div>
-                Sort By:
+                <label> Sort By</label>
         <Select
                 value={selectedOption}
                 onChange={this.handleChange}
