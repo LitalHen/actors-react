@@ -3,6 +3,7 @@ import Actor from "./data-models/Actor";
 
 function App() {
 
+
   const actorData=[{
     "fname":"Dwayne",
     "lname":"Johnson",
@@ -38,4 +39,4 @@ const actorsArr=actorData.map((actor) => {
 }
 
 export default App;
-//test
+
